@@ -11,7 +11,8 @@ function greet(name: string): string {
     return `Hello ${name}`;
 }
 
-
+console.log(add(20, 34));
+console.log(greet("Hello"));
 
 
 
@@ -24,4 +25,6 @@ let age = 25;
 function add2(a: number, b: number) {
     return a + b;
 }
+
+console.log(add2(10, 24));
 
