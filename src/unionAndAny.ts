@@ -33,7 +33,7 @@ data = {};       // ✅
 let data2: any = "hello";
 
 data2.toUpperCase(); // ✅
-data2.foo.bar();     // ✅ at compile time
+//data2.foo.bar();     // ✅ at compile time
 
 //unknown
 let data3: unknown = "hello";
@@ -42,4 +42,22 @@ let data3: unknown = "hello";
 if (typeof data3 === "string") {
     console.log(data3.toUpperCase()); // ✅
 }
+
+
+//intresting case
+const orders = ["20", "25", "35", "40"];
+
+//to avoid any type
+let currentorder : string | undefined;
+
+for(let order of orders){
+    if(order === "25"){
+        currentorder = order
+        break
+    }
+    currentorder = "35"
+}
+
+
+console.log(currentorder);
 
